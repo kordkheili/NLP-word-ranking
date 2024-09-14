@@ -10,7 +10,7 @@ import nltk
 stemmer = PorterStemmer()
 
 # Load the Excel file containing the word list
-df_words = pd.read_excel('input-custom1.xlsx',sheet_name='Sheet1')
+df_words = pd.read_excel('input-custom2.xlsx',sheet_name='Sheet18')
 df_words['Word'] = df_words['Word'].astype(str).str.lower()
 
 # Read the text file and count word frequencies
@@ -46,4 +46,4 @@ df_sorted = df_merged.sort_values(by='Freq', ascending=False)
 print(df_sorted[['Word', 'Freq', 'raw_rank']])
 
 # Optionally, save the sorted DataFrame to a new Excel file
-df_sorted.to_excel('output-custom1.xlsx', index=False)
+df_sorted.to_excel('output-custom2.xlsx', index=False)
